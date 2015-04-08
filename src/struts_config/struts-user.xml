@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>	
+	<!-- 用户action--> 
+	<package name="user" extends="struts-default" >
+	  <!-- 
+	     <result-types>
+            <result-type name="json" class="org.apache.struts2.json.JSONResult"/>
+        </result-types>
+        <interceptors>
+            <interceptor name="json" class="org.apache.struts2.json.JSONInterceptor"/>
+        </interceptors>
+       -->
+		<action name="loginform" class="com.automobile.action.UserAction" method="checkLogin">
+			<result name="ok">../jsp/index.jsp</result>
+			<result name="input">/jsp/login.jsp</result>
+		</action>
+		
+		<action name="userManage" class="com.automobile.action.UserAction" method="userInfoManage">
+			<result name="ok">../jsp/userinfo.jsp</result>
+		</action>
+		
+		<!-- 添加userinfo -->
+		<action name="addUserInfo" class="com.automobile.action.UserAction" method="addUserInfo"></action>
+		<!-- 删除userinfo -->
+		<action name="delUserInfo" class="com.automobile.action.UserAction" method="delUserInfo"></action>
+	</package>
+	
+	<package name="json"  extends="json-default">
+		<action name="userListAction" class="com.automobile.action.UserAction" method="showUserListAll">
+			<result name="success" type="json">
+				<param name="root" >resultObject</param>
+			</result>  
+		</action>
+	</package>
+ 
+</struts>
+
+	
