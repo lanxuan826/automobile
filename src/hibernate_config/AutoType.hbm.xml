@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-4-7 21:58:34 by Hibernate Tools 3.2.2.GA -->
+<hibernate-mapping>
+    <class name="com.automobile.model.AutoType" table="t_auto_type" catalog="automobile_db">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="autoTypeId" type="string">
+            <column name="auto_type_id" length="20" not-null="true" unique="true">
+                <comment>&#179;&#181;&#208;&#205;&#208;&#205;&#186;&#197;ID</comment>
+            </column>
+        </property>
+        <property name="autoType" type="string">
+            <column name="auto_type" length="20" not-null="true">
+                <comment>&#179;&#181;&#193;&#190;&#208;&#205;&#186;&#197;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="autoTypeName" type="string">
+            <column name="auto_type_name" length="20">
+                <comment>&#179;&#181;&#191;&#238;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="autoLevel" type="string">
+            <column name="auto_level" length="20" not-null="true">
+                <comment>&#179;&#181;&#193;&#190;&#188;&#182;&#177;&#240;</comment>
+            </column>
+        </property>
+        <property name="autoWidth" type="java.lang.Double">
+            <column name="auto_width" precision="22" scale="0">
+                <comment>&#191;&#237;&#182;&#200;mm</comment>
+            </column>
+        </property>
+        <property name="autoLength" type="java.lang.Double">
+            <column name="auto_length" precision="22" scale="0">
+                <comment>&#179;&#164;&#182;&#200;mm</comment>
+            </column>
+        </property>
+        <property name="autoHeight" type="java.lang.Double">
+            <column name="auto_height" precision="22" scale="0">
+                <comment>&#184;&#223;&#182;&#200;mm</comment>
+            </column>
+        </property>
+        <property name="axleBase" type="java.lang.Double">
+            <column name="axle_base" precision="22" scale="0">
+                <comment>&#214;&#225;&#190;&#224;</comment>
+            </column>
+        </property>
+        <property name="frontGauge" type="java.lang.Double">
+            <column name="front_gauge" precision="22" scale="0">
+                <comment>&#199;&#176;&#194;&#214;&#190;&#224;</comment>
+            </column>
+        </property>
+        <property name="rearGauge" type="java.lang.Double">
+            <column name="rear_gauge" precision="22" scale="0">
+                <comment>&#186;&#243;&#194;&#214;&#190;&#224;</comment>
+            </column>
+        </property>
+        <property name="chassisCons" type="string">
+            <column name="chassis_cons" length="5">
+                <comment>&#181;&#215;&#197;&#204;&#189;&#225;&#185;&#185;</comment>
+            </column>
+        </property>
+        <property name="chassisGauge" type="java.lang.Integer">
+            <column name="chassis_gauge">
+                <comment>&#215;&#238;&#208;&#161;&#192;&#235;&#181;&#216;&#188;&#228;&#207;&#182;</comment>
+            </column>
+        </property>
+        <property name="emissions" type="java.lang.Double">
+            <column name="emissions" precision="22" scale="0">
+                <comment>&#197;&#197;&#193;&#191;&#163;&#168;L&#163;&#169;</comment>
+            </column>
+        </property>
+        <property name="engineConfig" type="string">
+            <column name="engine_config" length="3">
+                <comment>&#183;&#162;&#182;&#175;&#187;&#250;&#206;&#187;&#214;&#195;</comment>
+            </column>
+        </property>
+        <property name="driveMode" type="string">
+            <column name="drive_mode" length="3">
+                <comment>&#199;&#253;&#182;&#175;&#183;&#189;&#202;&#189;</comment>
+            </column>
+        </property>
+        <property name="suspensionSystem" type="string">
+            <column name="suspension_system" length="5">
+                <comment>&#208;&#252;&#185;&#210;&#207;&#181;&#205;&#179;</comment>
+            </column>
+        </property>
+        <property name="powerType" type="string">
+            <column name="power_type" length="5" not-null="true">
+                <comment>&#214;&#250;&#193;&#166;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="linearType" type="string">
+            <column name="linear_type" length="3">
+                <comment>&#214;&#198;&#198;&#247;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="tyreSize" type="string">
+            <column name="tyre_size" length="50">
+                <comment>&#194;&#214;&#204;&#165;&#185;&#230;&#184;&#241;</comment>
+            </column>
+        </property>
+        <property name="netWeight" type="java.lang.Double">
+            <column name="net_weight" precision="22" scale="0">
+                <comment>&#191;&#213;&#179;&#181;&#214;&#202;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="maxTotalMass" type="java.lang.Double">
+            <column name="max_total_mass" precision="22" scale="0">
+                <comment>&#212;&#202;&#208;&#237;&#215;&#220;&#214;&#202;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="doorNum" type="java.lang.Integer">
+            <column name="door_num">
+                <comment>&#179;&#181;&#195;&#197;&#202;&#253;</comment>
+            </column>
+        </property>
+        <property name="searting" type="java.lang.Integer">
+            <column name="searting">
+                <comment>&#215;&#249;&#206;&#187;&#202;&#253;</comment>
+            </column>
+        </property>
+        <property name="bootVol" type="java.lang.Double">
+            <column name="boot_vol" precision="22" scale="0">
+                <comment>&#186;&#243;&#177;&#179;&#207;&#228;&#200;&#221;&#187;&#253;(L)</comment>
+            </column>
+        </property>
+        <property name="fuelTank" type="java.lang.Double">
+            <column name="fuel_tank" precision="22" scale="0">
+                <comment>&#211;&#202;&#207;&#228;&#200;&#221;&#187;&#253;&#163;&#168;L&#163;&#169;</comment>
+            </column>
+        </property>
+        <property name="autoColor" type="java.lang.Integer">
+            <column name="auto_color">
+                <comment>&#179;&#181;&#201;&#237;&#197;&#228;&#201;&#171;</comment>
+            </column>
+        </property>
+        <property name="antennaType" type="string">
+            <column name="antenna_type" length="3">
+                <comment>&#204;&#236;&#207;&#223;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="autoWindow" type="string">
+            <column name="auto_window" length="20">
+                <comment>&#204;&#236;&#180;&#176;</comment>
+            </column>
+        </property>
+        <property name="createtime" type="date">
+            <column name="createtime" length="10">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="updatetime" type="date">
+            <column name="updatetime" length="10">
+                <comment>&#208;&#222;&#184;&#196;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="functionConfig" type="string">
+            <column name="function_config" length="50">
+                <comment>&#185;&#166;&#196;&#220;&#197;&#228;&#214;&#195;</comment>
+            </column>
+        </property>
+        <property name="comfortConfig" type="string">
+            <column name="comfort_config" length="50">
+                <comment>&#202;&#230;&#202;&#202;&#208;&#212;&#197;&#228;&#214;&#195;</comment>
+            </column>
+        </property>
+        <property name="safeConfig" type="string">
+            <column name="safe_config" length="50">
+                <comment>&#176;&#178;&#200;&#171;&#208;&#212;&#197;&#228;&#214;&#195;</comment>
+            </column>
+        </property>
+        <property name="remark" type="string">
+            <column name="remark" length="200">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-4-7 21:58:34 by Hibernate Tools 3.2.2.GA -->
+<hibernate-mapping>
+    <class name="com.automobile.model.Customer" table="t_customer" catalog="automobile_db">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="custId" type="string">
+            <column name="cust_id" length="10" not-null="true">
+                <comment>&#191;&#205;&#187;&#167;ID</comment>
+            </column>
+        </property>
+        <property name="custName" type="string">
+            <column name="cust_name" length="20" not-null="true">
+                <comment>&#191;&#205;&#187;&#167;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="custBirth" type="date">
+            <column name="cust_birth" length="10" />
+        </property>
+        <property name="idCard" type="string">
+            <column name="id_card" length="20" />
+        </property>
+        <property name="regionId" type="int">
+            <column name="region_id" not-null="true" />
+        </property>
+        <property name="custJob" type="string">
+            <column name="cust_job" length="20" />
+        </property>
+        <property name="custCompany" type="string">
+            <column name="cust_company" length="50" />
+        </property>
+        <property name="custType" type="string">
+            <column name="cust_type" length="6" />
+        </property>
+        <property name="custFamilyNum" type="java.lang.Integer">
+            <column name="cust_family_num" />
+        </property>
+        <property name="custYearMoney" type="string">
+            <column name="cust_year_money" length="10" />
+        </property>
+        <property name="custTel" type="string">
+            <column name="cust_tel" length="15" />
+        </property>
+        <property name="custAddress" type="string">
+            <column name="cust_address" length="50" />
+        </property>
+        <property name="custQq" type="string">
+            <column name="cust_qq" length="15" />
+        </property>
+        <property name="custEmail" type="string">
+            <column name="cust_email" length="20" />
+        </property>
+        <property name="remark" type="string">
+            <column name="remark" length="200" />
+        </property>
+    </class>
+</hibernate-mapping>

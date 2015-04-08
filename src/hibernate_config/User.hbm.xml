@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.automobile.model.User" table="t_user" >
+        <id name="user_id" type="java.lang.Integer">
+            <column name="user_id" />
+            <generator class="native" />
+        </id>
+     
+        <property name="username" type="string">
+            <column name="username" length="10" not-null="true" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" length="10" not-null="true" />
+        </property>
+        <property name="nickname" type="string">
+            <column name="nickname" length="10" />
+        </property>
+        <property name="role_id" type="java.lang.Integer">
+            <column name="role_id" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" length="50" />
+        </property>
+          <property name="telephone" type="string">
+            <column name="telephone" length="20" />
+        </property>  
+        <property name="email" type="string">
+            <column name="email" length="20" />
+        </property> 
+         <property name="createtime" type="date">
+            <column name="createtime" />
+        </property>
+             <property name="remark" type="string">
+            <column name="remark" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

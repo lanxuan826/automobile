@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-4-7 21:58:34 by Hibernate Tools 3.2.2.GA -->
+<hibernate-mapping>
+    <class name="com.automobile.model.Automobile" table="t_automobile" catalog="automobile_db">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="autoId" type="string">
+            <column name="auto_id" length="20" not-null="true" unique="true">
+                <comment>&#179;&#181;&#193;&#190;&#177;&#224;&#186;&#197;&#163;&#168;&#196;&#218;&#178;&#191;&#185;&#220;&#192;&#237;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="autoFacNum" type="string">
+            <column name="auto_fac_num" length="20" not-null="true" unique="true">
+                <comment>&#179;&#181;&#193;&#190;&#179;&#246;&#179;&#167;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="engineNum" type="string">
+            <column name="engine_num" length="20" not-null="true" unique="true">
+                <comment>&#183;&#162;&#182;&#175;&#187;&#250;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="engineName" type="string">
+            <column name="engine_name" length="20" not-null="true">
+                <comment>&#183;&#162;&#182;&#175;&#187;&#250;&#179;&#167;&#188;&#210;</comment>
+            </column>
+        </property>
+        <property name="certNum" type="string">
+            <column name="cert_num" length="20" not-null="true" unique="true">
+                <comment>&#186;&#207;&#184;&#241;&#214;&#164;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="vin" type="string">
+            <column name="vin" length="20" not-null="true" unique="true">
+                <comment>&#181;&#215;&#197;&#204;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="autoName" type="string">
+            <column name="auto_name" length="20" not-null="true">
+                <comment>&#179;&#181;&#193;&#190;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="autoTypeId" type="java.lang.Integer">
+            <column name="auto_type_id">
+                <comment>&#179;&#181;&#193;&#190;&#192;&#224;&#208;&#205;ID</comment>
+            </column>
+        </property>
+        <property name="autoStatus" type="string">
+            <column name="auto_status" length="10" not-null="true">
+                <comment>&#179;&#181;&#193;&#190;&#215;&#180;&#204;&#172;</comment>
+            </column>
+        </property>
+        <property name="remark" type="string">
+            <column name="remark" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-4-7 21:58:34 by Hibernate Tools 3.2.2.GA -->
+<hibernate-mapping>
+    <class name="com.automobile.model.Storge" table="t_storge" catalog="automobile_db">
+        <id name="stoId" type="java.lang.Integer">
+            <column name="sto_id" />
+            <generator class="identity" />
+        </id>
+        <property name="stoName" type="string">
+            <column name="sto_name" length="20" not-null="true" />
+        </property>
+        <property name="regoinId" type="java.lang.Integer">
+            <column name="regoin_id" />
+        </property>
+        <property name="stoBirth" type="date">
+            <column name="sto_birth" length="10" />
+        </property>
+        <property name="stoNum" type="java.lang.Integer">
+            <column name="sto_num" />
+        </property>
+        <property name="stoStatus" type="string">
+            <column name="sto_status" length="5">
+                <comment>&#178;&#214;&#191;&#226;&#215;&#180;&#204;&#172;</comment>
+            </column>
+        </property>
+        <property name="userId" type="java.lang.Integer">
+            <column name="user_id" />
+        </property>
+        <property name="stoAddress" type="string">
+            <column name="sto_address" length="50" />
+        </property>
+        <property name="stoPhone" type="string">
+            <column name="sto_phone" length="15" />
+        </property>
+        <property name="stoFax" type="string">
+            <column name="sto_fax" length="15" />
+        </property>
+        <property name="remark" type="string">
+            <column name="remark" length="200" />
+        </property>
+    </class>
+</hibernate-mapping>

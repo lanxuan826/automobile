@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-4-7 21:58:34 by Hibernate Tools 3.2.2.GA -->
+<hibernate-mapping>
+    <class name="com.automobile.model.Log" table="t_log" catalog="automobile_db">
+        <id name="logId" type="java.lang.Integer">
+            <column name="log_id" />
+            <generator class="identity" />
+        </id>
+        <property name="userId" type="int">
+            <column name="user_id" not-null="true" />
+        </property>
+        <property name="logDate" type="date">
+            <column name="log_date" length="10" not-null="true" />
+        </property>
+        <property name="logOp" type="string">
+            <column name="log_op" length="50" not-null="true">
+                <comment>&#178;&#217;&#215;&#247;&#208;&#197;&#207;&#162;</comment>
+            </column>
+        </property>
+        <property name="logRemark" type="string">
+            <column name="log_remark" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

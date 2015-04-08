@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-4-7 21:58:34 by Hibernate Tools 3.2.2.GA -->
+<hibernate-mapping>
+    <class name="com.automobile.model.Utilitybill" table="t_utilitybill" catalog="automobile_db">
+        <composite-id name="id" class="com.automobile.model.UtilitybillId">
+            <key-property name="id" type="int">
+                <column name="id" />
+            </key-property>
+            <key-property name="ubId" type="string">
+                <column name="ub_id" length="10" />
+            </key-property>
+        </composite-id>
+        <property name="ubDate" type="date">
+            <column name="ub_date" length="10">
+                <comment>&#202;&#185;&#211;&#195;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="ubType" type="java.lang.Integer">
+            <column name="ub_type" />
+        </property>
+        <property name="sid" type="java.lang.Integer">
+            <column name="sid">
+                <comment>4s&#181;&#234;&#198;&#204;</comment>
+            </column>
+        </property>
+        <property name="ubMon" type="java.lang.Double">
+            <column name="ub_mon" precision="22" scale="0" />
+        </property>
+        <property name="ubUser" type="string">
+            <column name="ub_user" length="200">
+                <comment>&#202;&#185;&#211;&#195;&#211;&#195;&#205;&#190;</comment>
+            </column>
+        </property>
+        <property name="ubMkDate" type="date">
+            <column name="ub_mk_date" length="10">
+                <comment>&#214;&#198;&#181;&#165;&#200;&#213;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="remark" type="string">
+            <column name="remark" length="200">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-4-7 21:58:34 by Hibernate Tools 3.2.2.GA -->
+<hibernate-mapping>
+    <class name="com.automobile.model.Saleplan" table="t_saleplan" catalog="automobile_db">
+        <composite-id name="id" class="com.automobile.model.SaleplanId">
+            <key-property name="id" type="int">
+                <column name="id" />
+            </key-property>
+            <key-property name="planId" type="string">
+                <column name="plan_id" length="20" />
+            </key-property>
+        </composite-id>
+        <property name="regionId" type="int">
+            <column name="region_id" not-null="true" />
+        </property>
+        <property name="autoTypeId" type="string">
+            <column name="auto_type_id" length="20" not-null="true" />
+        </property>
+        <property name="planNum" type="java.lang.Double">
+            <column name="plan_num" precision="22" scale="0" />
+        </property>
+        <property name="planDate" type="date">
+            <column name="plan_date" length="10" not-null="true">
+                <comment>&#188;&#198;&#187;&#174;&#200;&#213;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="startDate" type="date">
+            <column name="start_date" length="10">
+                <comment>&#201;&#250;&#208;&#167;&#200;&#213;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="endDate" type="date">
+            <column name="end_date" length="10">
+                <comment>&#189;&#216;&#214;&#185;&#200;&#213;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="remark" type="string">
+            <column name="remark" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-4-7 21:58:34 by Hibernate Tools 3.2.2.GA -->
+<hibernate-mapping>
+    <class name="com.automobile.model.SalevoucherH" table="t_salevoucher_h" catalog="automobile_db">
+        <id name="pkSvH" type="java.lang.Integer">
+            <column name="pk_sv_h" />
+            <generator class="identity" />
+        </id>
+        <property name="saleId" type="string">
+            <column name="sale_id" length="20" not-null="true" />
+        </property>
+        <property name="customerType" type="int">
+            <column name="customer_type" not-null="true" />
+        </property>
+        <property name="customerId" type="int">
+            <column name="customer_id" not-null="true" />
+        </property>
+        <property name="saleDate" type="date">
+            <column name="sale_date" length="10" not-null="true" />
+        </property>
+        <property name="stoId" type="int">
+            <column name="sto_id" not-null="true" />
+        </property>
+        <property name="userId" type="int">
+            <column name="user_id" not-null="true" />
+        </property>
+        <property name="isPay" type="java.lang.Boolean">
+            <column name="is_pay" />
+        </property>
+        <property name="taxId" type="java.lang.Integer">
+            <column name="tax_id" />
+        </property>
+        <property name="beforeTax" type="java.lang.Double">
+            <column name="before_tax" precision="22" scale="0" />
+        </property>
+        <property name="taxMoney" type="java.lang.Double">
+            <column name="tax_money" precision="22" scale="0" />
+        </property>
+        <property name="afterTax" type="java.lang.Double">
+            <column name="after_tax" precision="22" scale="0" />
+        </property>
+        <property name="totalMoney" type="java.lang.Double">
+            <column name="total_money" precision="22" scale="0" />
+        </property>
+        <property name="remark" type="string">
+            <column name="remark" length="200" />
+        </property>
+    </class>
+</hibernate-mapping>

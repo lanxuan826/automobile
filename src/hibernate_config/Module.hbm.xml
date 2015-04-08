@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-4-7 21:58:34 by Hibernate Tools 3.2.2.GA -->
+<hibernate-mapping>
+    <class name="com.automobile.model.Module" table="t_module" catalog="automobile_db">
+        <id name="moduleId" type="java.lang.Integer">
+            <column name="module_id" />
+            <generator class="identity" />
+        </id>
+        <property name="moduleName" type="string">
+            <column name="module_name" length="20">
+                <comment>&#196;&#163;&#191;&#233;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="parentId" type="int">
+            <column name="parent_id" not-null="true">
+                <comment>&#184;&#184;&#196;&#163;&#191;&#233;ID</comment>
+            </column>
+        </property>
+        <property name="modouleUrl" type="string">
+            <column name="modoule_url" length="50">
+                <comment>URL</comment>
+            </column>
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="20" />
+        </property>
+        <property name="moduleRemark" type="string">
+            <column name="module_remark" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

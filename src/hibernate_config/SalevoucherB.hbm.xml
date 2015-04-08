@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-4-7 21:58:34 by Hibernate Tools 3.2.2.GA -->
+<hibernate-mapping>
+    <class name="com.automobile.model.SalevoucherB" table="t_salevoucher_b" catalog="automobile_db">
+        <id name="pkSvB" type="java.lang.Integer">
+            <column name="pk_sv_b" />
+            <generator class="identity" />
+        </id>
+        <property name="pkSvH" type="int">
+            <column name="pk_sv_h" not-null="true">
+                <comment>&#179;&#181;&#193;&#190;&#207;&#250;&#202;&#219;&#177;&#237;&#205;&#183;ID</comment>
+            </column>
+        </property>
+        <property name="autoTypeId" type="string">
+            <column name="auto_type_id" length="20" not-null="true" />
+        </property>
+        <property name="autoId" type="string">
+            <column name="auto_id" length="20" not-null="true" />
+        </property>
+        <property name="salePrice" type="java.lang.Double">
+            <column name="sale_price" precision="22" scale="0" />
+        </property>
+        <property name="saleNum" type="java.lang.Double">
+            <column name="sale_num" precision="22" scale="0" />
+        </property>
+        <property name="beforeTax" type="java.lang.Double">
+            <column name="before_tax" precision="22" scale="0" />
+        </property>
+        <property name="taxMoney" type="java.lang.Double">
+            <column name="tax_money" precision="22" scale="0" />
+        </property>
+        <property name="afterTax" type="java.lang.Double">
+            <column name="after_tax" precision="22" scale="0" />
+        </property>
+        <property name="tempMoney" type="java.lang.Double">
+            <column name="temp_money" precision="22" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

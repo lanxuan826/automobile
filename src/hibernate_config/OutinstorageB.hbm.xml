@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-4-7 21:58:34 by Hibernate Tools 3.2.2.GA -->
+<hibernate-mapping>
+    <class name="com.automobile.model.OutinstorageB" table="t_outinstorage_b" catalog="automobile_db">
+        <id name="pkOutinB" type="java.lang.Integer">
+            <column name="pk_outin_b" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="TOutinstorageH" class="com.automobile.model.TOutinstorageH" fetch="select">
+            <column name="pk_outin_h" not-null="true">
+                <comment>&#179;&#181;&#193;&#190;&#179;&#246;&#200;&#235;&#191;&#226;&#181;&#165;&#214;&#247;&#177;&#237;&#214;&#247;&#188;&#252;</comment>
+            </column>
+        </many-to-one>
+        <property name="autoTypeId" type="string">
+            <column name="auto_type_id" length="20" not-null="true" />
+        </property>
+        <property name="number" type="java.lang.Integer">
+            <column name="number" />
+        </property>
+        <property name="billDate" type="date">
+            <column name="bill_date" length="10">
+                <comment>&#210;&#181;&#206;&#241;&#200;&#213;&#198;&#218;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-4-7 21:58:34 by Hibernate Tools 3.2.2.GA -->
+<hibernate-mapping>
+    <class name="com.automobile.model.Stoinventory" table="t_stoinventory" catalog="automobile_db">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="stoId" type="java.lang.Integer">
+            <column name="sto_id">
+                <comment>&#178;&#214;&#191;&#226;ID</comment>
+            </column>
+        </property>
+        <property name="autoTypeId" type="string">
+            <column name="auto_type_id" length="20" not-null="true" />
+        </property>
+        <property name="invNum" type="java.lang.Integer">
+            <column name="inv_num">
+                <comment>&#191;&#226;&#180;&#230;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="warningNum" type="java.lang.Integer">
+            <column name="warning_num">
+                <comment>&#212;&#164;&#190;&#175;&#214;&#181;</comment>
+            </column>
+        </property>
+        <property name="remark" type="string">
+            <column name="remark" length="200">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

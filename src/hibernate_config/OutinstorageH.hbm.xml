@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-4-7 21:58:34 by Hibernate Tools 3.2.2.GA -->
+<hibernate-mapping>
+    <class name="com.automobile.model.OutinstorageH" table="t_outinstorage_h" catalog="automobile_db">
+        <id name="pkOutinH" type="java.lang.Integer">
+            <column name="pk_outin_h" />
+            <generator class="identity" />
+        </id>
+        <property name="outinflag" type="string">
+            <column name="outinflag" length="10" not-null="true">
+                <comment>&#179;&#246;&#200;&#235;&#191;&#226;&#177;&#234;&#202;&#182;</comment>
+            </column>
+        </property>
+        <property name="billCode" type="string">
+            <column name="bill_code" length="10" not-null="true">
+                <comment>&#181;&#165;&#190;&#221;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="stoId" type="java.lang.Integer">
+            <column name="sto_id">
+                <comment>&#178;&#214;&#191;&#226;</comment>
+            </column>
+        </property>
+        <property name="userId" type="java.lang.Integer">
+            <column name="user_id">
+                <comment>&#190;&#173;&#202;&#214;&#200;&#203;</comment>
+            </column>
+        </property>
+        <property name="outinDate" type="date">
+            <column name="outin_date" length="10">
+                <comment>&#214;&#198;&#177;&#237;&#200;&#213;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="remark" type="string">
+            <column name="remark" length="200" />
+        </property>
+        <set name="TOutinstorageBs" inverse="true">
+            <key>
+                <column name="pk_outin_h" not-null="true">
+                    <comment>&#179;&#181;&#193;&#190;&#179;&#246;&#200;&#235;&#191;&#226;&#181;&#165;&#214;&#247;&#177;&#237;&#214;&#247;&#188;&#252;</comment>
+                </column>
+            </key>
+            <one-to-many class="com.automobile.model.TOutinstorageB" />
+        </set>
+    </class>
+</hibernate-mapping>

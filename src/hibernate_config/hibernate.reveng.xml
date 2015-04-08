@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+	<type-mapping>
+		<sql-type jdbc-type="VARCHAR" hibernate-type="string"></sql-type>
+	</type-mapping>
+	<table-filter match-name="t_4s" match-catalog="automobile_db"></table-filter>
+	<table-filter match-name="t_auto_type"
+		match-catalog="automobile_db">
+	</table-filter>
+	<table-filter match-name="t_automobile"
+		match-catalog="automobile_db">
+	</table-filter>
+	<table-filter match-name="t_customer"
+		match-catalog="automobile_db">
+	</table-filter>
+	<table-filter match-name="t_dealer" match-catalog="automobile_db"></table-filter>
+	<table-filter match-name="t_log" match-catalog="automobile_db"></table-filter>
+	<table-filter match-name="t_module" match-catalog="automobile_db"></table-filter>
+	<table-filter match-name="t_outinstorage_b"
+		match-catalog="automobile_db">
+	</table-filter>
+	<table-filter match-name="t_outinstorage_h"
+		match-catalog="automobile_db">
+	</table-filter>
+	<table-filter match-name="t_power" match-catalog="automobile_db"></table-filter>
+	<table-filter match-name="t_role" match-catalog="automobile_db"></table-filter>
+	<table-filter match-name="t_saleplan"
+		match-catalog="automobile_db">
+	</table-filter>
+	<table-filter match-name="t_salevoucher_b"
+		match-catalog="automobile_db">
+	</table-filter>
+	<table-filter match-name="t_salevoucher_h"
+		match-catalog="automobile_db">
+	</table-filter>
+	<table-filter match-name="t_stoinventory"
+		match-catalog="automobile_db">
+	</table-filter>
+	<table-filter match-name="t_storge" match-catalog="automobile_db"></table-filter>
+	<table-filter match-name="t_taxrate"
+		match-catalog="automobile_db">
+	</table-filter>
+	<table-filter match-name="t_user" match-catalog="automobile_db"></table-filter>
+	<table-filter match-name="t_utilitybill"
+		match-catalog="automobile_db">
+	</table-filter>
+</hibernate-reverse-engineering>
