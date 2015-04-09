@@ -3,7 +3,7 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 2015-4-7 21:58:34 by Hibernate Tools 3.2.2.GA -->
 <hibernate-mapping>
-    <class name="com.automobile.model.Utilitybill" table="t_utilitybill" catalog="automobile_db">
+    <class name="com.automobile.model.UtilityBill" table="t_utilitybill" catalog="automobile_db">
         <composite-id name="id" class="com.automobile.model.UtilitybillId">
             <key-property name="id" type="int">
                 <column name="id" />

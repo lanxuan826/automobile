@@ -3,7 +3,7 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 2015-4-7 21:58:34 by Hibernate Tools 3.2.2.GA -->
 <hibernate-mapping>
-    <class name="com.automobile.model.Taxrate" table="t_taxrate" catalog="automobile_db">
+    <class name="com.automobile.model.TaxRate" table="t_taxrate" catalog="automobile_db">
         <id name="taxId" type="java.lang.Integer">
             <column name="tax_id" />
             <generator class="identity" />

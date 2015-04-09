@@ -3,12 +3,12 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 2015-4-7 21:58:34 by Hibernate Tools 3.2.2.GA -->
 <hibernate-mapping>
-    <class name="com.automobile.model.OutinstorageB" table="t_outinstorage_b" catalog="automobile_db">
+    <class name="com.automobile.model.OutInStorageB" table="t_outinstorage_b" catalog="automobile_db">
         <id name="pkOutinB" type="java.lang.Integer">
             <column name="pk_outin_b" />
             <generator class="identity" />
         </id>
-        <many-to-one name="TOutinstorageH" class="com.automobile.model.TOutinstorageH" fetch="select">
+        <many-to-one name="OutinstorageH" class="com.automobile.model.OutInStorageH" fetch="select">
             <column name="pk_outin_h" not-null="true">
                 <comment>&#179;&#181;&#193;&#190;&#179;&#246;&#200;&#235;&#191;&#226;&#181;&#165;&#214;&#247;&#177;&#237;&#214;&#247;&#188;&#252;</comment>
             </column>

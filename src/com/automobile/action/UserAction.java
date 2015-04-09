@@ -19,7 +19,10 @@ import com.automobile.service.IUserService;
 import com.automobile.util.SystemConst;
 import com.automobile.util.SystemUtil;
 import com.opensymphony.xwork2.ActionSupport;
-/*
+/**
+ * 用户action
+ * @author Administrator
+ *
  */
 public class UserAction extends ActionSupport {
 

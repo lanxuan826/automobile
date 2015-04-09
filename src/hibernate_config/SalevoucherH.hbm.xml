@@ -3,7 +3,7 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 2015-4-7 21:58:34 by Hibernate Tools 3.2.2.GA -->
 <hibernate-mapping>
-    <class name="com.automobile.model.SalevoucherH" table="t_salevoucher_h" catalog="automobile_db">
+    <class name="com.automobile.model.SaleVoucherH" table="t_salevoucher_h" catalog="automobile_db">
         <id name="pkSvH" type="java.lang.Integer">
             <column name="pk_sv_h" />
             <generator class="identity" />
