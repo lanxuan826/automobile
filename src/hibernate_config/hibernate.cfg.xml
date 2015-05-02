@@ -49,6 +49,14 @@
 		<property name="mappingResources">
 				<list>
 					<value>hibernate_config/User.hbm.xml</value>
+					<value>hibernate_config/Customer.hbm.xml</value>
+					<value>hibernate_config/Dealer.hbm.xml</value>
+					<value>hibernate_config/Storge.hbm.xml</value>
+					<value>hibernate_config/Region.hbm.xml</value>
+					<value>hibernate_config/Taxrate.hbm.xml</value>
+					<value>hibernate_config/Automobile.hbm.xml</value>
+					<value>hibernate_config/AutoType.hbm.xml</value>
+					<value>hibernate_config/SalevoucherH.hbm.xml</value>
 				</list>
 		</property>
 

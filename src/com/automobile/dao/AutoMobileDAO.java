@@ -2,6 +2,7 @@ package com.automobile.dao;
 import java.util.List;
 
 import com.automobile.model.AutoMobile;
+import com.automobile.model.AutoType;
 
 public interface AutoMobileDAO {
 	
@@ -12,4 +13,6 @@ public interface AutoMobileDAO {
 	public List findByWord(Object word);
 	public List findByAutoMobileValue(Object AutoMobileValue);
 	public List findAll();
+	
+	public List<AutoMobile> getAutoInfoByType(AutoType autoType);
 }

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.automobile.model.Region" table="t_region" >
+        <id name="regionID" type="java.lang.Integer">
+            <column name="regionId" />
+            <generator class="identity" />
+        </id>
+        <property name="regionName" type="string">
+            <column name="regionName" length="255" not-null="true">
+            </column>
+        </property>
+        <property name="regionCode" type="string">
+            <column name="regionCode" length="255" >
+            </column>
+        </property>
+        <property name="fatherId" type="int">
+            <column name="fatherId" length="11" />
+        </property>
+        <property name="regionRemark" type="string">
+            <column name="remark" length="200" />
+        </property>
+    </class>
+</hibernate-mapping>

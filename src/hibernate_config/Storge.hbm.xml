@@ -22,7 +22,6 @@
         </property>
         <property name="stoStatus" type="string">
             <column name="sto_status" length="5">
-                <comment>&#178;&#214;&#191;&#226;&#215;&#180;&#204;&#172;</comment>
             </column>
         </property>
         <property name="userId" type="java.lang.Integer">

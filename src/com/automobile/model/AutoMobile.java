@@ -30,7 +30,7 @@ public class AutoMobile implements java.io.Serializable {
 	private String certNum;
 	private String vin;
 	private String autoName;
-	private Integer autoTypeId;
+	private String autoTypeId;
 	private String autoStatus;
 	private String remark;
 
@@ -52,7 +52,7 @@ public class AutoMobile implements java.io.Serializable {
 
 	public AutoMobile(String autoId, String autoFacNum, String engineNum,
 			String engineName, String certNum, String vin, String autoName,
-			Integer autoTypeId, String autoStatus, String remark) {
+			String autoTypeId, String autoStatus, String remark) {
 		this.autoId = autoId;
 		this.autoFacNum = autoFacNum;
 		this.engineNum = engineNum;
@@ -140,11 +140,11 @@ public class AutoMobile implements java.io.Serializable {
 	}
 
 	@Column(name = "auto_type_id")
-	public Integer getAutoTypeId() {
+	public String getAutoTypeId() {
 		return this.autoTypeId;
 	}
 
-	public void setAutoTypeId(Integer autoTypeId) {
+	public void setAutoTypeId(String autoTypeId) {
 		this.autoTypeId = autoTypeId;
 	}
 

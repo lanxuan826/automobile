@@ -27,7 +27,7 @@ public class SaleVoucherH implements java.io.Serializable {
 	private Integer pkSvH;
 	private String saleId;
 	private int customerType;
-	private int customerId;
+	private String customerId;
 	private Date saleDate;
 	private int stoId;
 	private int userId;
@@ -38,38 +38,49 @@ public class SaleVoucherH implements java.io.Serializable {
 	private Double afterTax;
 	private Double totalMoney;
 	private String remark;
+	private String regionId;
+	
+	
+
+	public String getRegionId() {
+		return regionId;
+	}
+
+	public void setRegionId(String regionId) {
+		this.regionId = regionId;
+	}
 
 	public SaleVoucherH() {
 	}
 
-	public SaleVoucherH(String saleId, int customerType, int customerId,
-			Date saleDate, int stoId, int userId) {
-		this.saleId = saleId;
-		this.customerType = customerType;
-		this.customerId = customerId;
-		this.saleDate = saleDate;
-		this.stoId = stoId;
-		this.userId = userId;
-	}
-
-	public SaleVoucherH(String saleId, int customerType, int customerId,
-			Date saleDate, int stoId, int userId, Boolean isPay, Integer taxId,
-			Double beforeTax, Double taxMoney, Double afterTax,
-			Double totalMoney, String remark) {
-		this.saleId = saleId;
-		this.customerType = customerType;
-		this.customerId = customerId;
-		this.saleDate = saleDate;
-		this.stoId = stoId;
-		this.userId = userId;
-		this.isPay = isPay;
-		this.taxId = taxId;
-		this.beforeTax = beforeTax;
-		this.taxMoney = taxMoney;
-		this.afterTax = afterTax;
-		this.totalMoney = totalMoney;
-		this.remark = remark;
-	}
+//	public SaleVoucherH(String saleId, int customerType, String customerId,
+//			Date saleDate, int stoId, int userId) {
+//		this.saleId = saleId;
+//		this.customerType = customerType;
+//		this.customerId = customerId;
+//		this.saleDate = saleDate;
+//		this.stoId = stoId;
+//		this.userId = userId;
+//	}
+//
+//	public SaleVoucherH(String saleId, int customerType, String customerId,
+//			Date saleDate, int stoId, int userId, Boolean isPay, Integer taxId,
+//			Double beforeTax, Double taxMoney, Double afterTax,
+//			Double totalMoney, String remark) {
+//		this.saleId = saleId;
+//		this.customerType = customerType;
+//		this.customerId = customerId;
+//		this.saleDate = saleDate;
+//		this.stoId = stoId;
+//		this.userId = userId;
+//		this.isPay = isPay;
+//		this.taxId = taxId;
+//		this.beforeTax = beforeTax;
+//		this.taxMoney = taxMoney;
+//		this.afterTax = afterTax;
+//		this.totalMoney = totalMoney;
+//		this.remark = remark;
+//	}
 
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
@@ -101,11 +112,11 @@ public class SaleVoucherH implements java.io.Serializable {
 	}
 
 	@Column(name = "customer_id", nullable = false)
-	public int getCustomerId() {
+	public String getCustomerId() {
 		return this.customerId;
 	}
 
-	public void setCustomerId(int customerId) {
+	public void setCustomerId(String customerId) {
 		this.customerId = customerId;
 	}
 

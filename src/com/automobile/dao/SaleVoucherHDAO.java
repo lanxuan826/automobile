@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.automobile.model.SaleVoucherH;
 
-public interface SaleVoucherHDAO {
+public interface SaleVoucherHDAO extends BaseDAO {
 
 	public void save(SaleVoucherH transientInstance);
 	public void delete(SaleVoucherH transientInstance);

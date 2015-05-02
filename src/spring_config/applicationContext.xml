@@ -10,9 +10,37 @@
         <!-- 数据库配置 -->
         <import resource="../hibernate_config/hibernate.cfg.xml"/>
         
-        <!-- DAO   -->
-       <bean id="userDAO" class="com.automobile.dao.impl.UserDAOImpl" parent="daoTemplate"></bean>
-      
+        <!--用户 DAO   -->
+       <bean id="userDAO" class="com.automobile.dao.impl.UserDAOImpl" parent="daoTemplate">
+       </bean>
+       <!-- 客户DAO -->
+       <bean id="customerDAO" class="com.automobile.dao.impl.CustomerDAOImpl" parent="daoTemplate">
+       </bean>
+		<!-- 经销商DAO -->       
+          <bean id="dealerDAO" class="com.automobile.dao.impl.DealerDAOImpl" parent="daoTemplate">
+          </bean>
+          <!-- 仓库DAO -->
+          <bean id="storgeDAO" class="com.automobile.dao.impl.StorgeDAOImpl" parent="daoTemplate">
+          </bean>
+          <!-- 地区DAO -->
+          <bean id="regionDAO" class="com.automobile.dao.impl.RegionDAOImpl" parent="daoTemplate">
+          </bean>
+            <!-- 税率DAO -->
+          <bean id="taxRateDAO" class="com.automobile.dao.impl.TaxRateDAOImpl" parent="daoTemplate">
+          </bean>
+          <!-- 车辆类型DAO -->
+          <bean id="autoTypeDAO" class="com.automobile.dao.impl.AutoTypeDAOImpl" parent="daoTemplate">
+          </bean>
+          <!-- 车辆DAO -->
+          <bean id="autoMobileDAO" class="com.automobile.dao.impl.AutoMobileDAOImpl" parent="daoTemplate">
+          </bean>
+          <!-- 销售表头DAO -->
+          <bean id="saleVoucherHDAO" class="com.automobile.dao.impl.SaleVoucherHDAOImpl" parent="daoTemplate">
+        	</bean>
+          	 <!-- 销售表tiDAO -->
+          <bean id="saleVoucherBDAO" class="com.automobile.dao.impl.SaleVoucherBDAOImpl" parent="daoTemplate">
+        	</bean>
+        	
         <import resource="/applicationContext-service.xml"/>
 		<import resource="/applicationContext-action.xml"/>
 </beans>  

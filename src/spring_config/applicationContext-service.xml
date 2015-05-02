@@ -4,12 +4,85 @@
 
 <beans>
 	<!-- 用户service -->
+	<bean id="saleManageService" parent="baseTransactionProxy">
+			<property name="target">
+				<bean class="com.automobile.service.impl.SaleManageService">
+					<property name="saleVoucherHDAO" ref="saleVoucherHDAO"></property>
+					<property name="saleVoucherBDAO" ref="saleVoucherBDAO"></property>
+				</bean>
+			</property>
+	</bean >
+	
+	<!-- 销售service -->
 	<bean id="userService" parent="baseTransactionProxy">
 			<property name="target">
 				<bean class="com.automobile.service.impl.UserService">
-							<property name="userDAO" ref="userDAO"></property>
+						<property name="userDAO" ref="userDAO"></property>
+				</bean>
+			</property>
+	</bean >
+	
+	<!-- 客户service -->
+	<bean id="custService" parent="baseTransactionProxy">
+			<property name="target">
+				<bean class="com.automobile.service.impl.CustomerService">
+							<property name="customerDAO" ref="customerDAO"></property>
+				</bean>
+			</property>
+	</bean >
+	
+	<!-- 经销商service -->
+	<bean id="dealerService" parent="baseTransactionProxy">
+			<property name="target">
+				<bean class="com.automobile.service.impl.DealerService">
+							<property name="dealerDAO" ref="dealerDAO"></property>
+				</bean>
+			</property>
+	</bean >
+
+
+	<!-- 仓库service -->
+	<bean id="storgeService" parent="baseTransactionProxy">
+			<property name="target">
+				<bean class="com.automobile.service.impl.StorgeService">
+							<property name="storgeDAO" ref="storgeDAO"></property>
 				</bean>
 			</property>
 	</bean>
-
+	
+	<!-- 地区service -->
+	<bean id="regionService" parent="baseTransactionProxy">
+			<property name="target">
+				<bean class="com.automobile.service.impl.RegionService">
+							<property name="regionDAO" ref="regionDAO"></property>
+				</bean>
+			</property>
+	</bean>
+	
+		<!-- 税率service -->
+	<bean id="taxRateService" parent="baseTransactionProxy">
+			<property name="target">
+				<bean class="com.automobile.service.impl.TaxRateService">
+							<property name="taxRateDAO" ref="taxRateDAO"></property>
+				</bean>
+			</property>
+	</bean>
+	
+	<!-- 车辆类型service -->
+	<bean id="autoTypeService" parent="baseTransactionProxy">
+			<property name="target">
+				<bean class="com.automobile.service.impl.AutoTypeService">
+							<property name="autoTypeDAO" ref="autoTypeDAO"></property>
+				</bean>
+			</property>
+	</bean>
+	
+	<!-- 车辆service -->
+	<bean id="autoMobileService" parent="baseTransactionProxy">
+			<property name="target">
+				<bean class="com.automobile.service.impl.AutoMobileService">
+							<property name="autoMobileDAO" ref="autoMobileDAO"></property>
+				</bean>
+			</property>
+	</bean>
 </beans>

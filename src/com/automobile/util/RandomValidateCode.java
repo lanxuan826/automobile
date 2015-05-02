@@ -10,10 +10,14 @@ import javax.imageio.ImageIO;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
+/**
+ * ç”Ÿäº§éªŒè¯ç çš„ç±»
+ * @author ly-wangweiqiang
+ *
+ */
 public class RandomValidateCode {
 
-	public static final String RANDOMCODEKEY = "RANDOMVALIDATECODEKEY";// ·Åµ½sessionÖĞµÄkey
+	public static final String RANDOMCODEKEY = "RANDOMVALIDATECODEKEY";// session key
 	private Random random = new Random();
 	private String randString = "01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
@@ -67,7 +71,7 @@ public class RandomValidateCode {
 	}
 
 	/**
-	 * »æÖÆËæ»ú×Ö·û´®
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½
 	 * 
 	 * @param g
 	 * @param randString2
@@ -87,7 +91,7 @@ public class RandomValidateCode {
 	}
 
 	/**
-	 * »ñÈ¡Ëæ»ú×Ö·û
+	 * ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½Ö·ï¿½
 	 * 
 	 * @param num
 	 * @return
@@ -97,7 +101,7 @@ public class RandomValidateCode {
 	}
 
 	/**
-	 * »æÖÆ¸ÉÈÅÏß
+	 * ï¿½ï¿½ï¿½Æ¸ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * 
 	 * @param g
 	 */

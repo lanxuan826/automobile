@@ -38,7 +38,7 @@ public class UserAction extends ActionSupport {
 	public String checkLogin() {
 		HttpServletRequest request =  ServletActionContext.getRequest();
 		HttpSession session = request.getSession();
-		User user = (User) session.getAttribute("user");
+		User user = (User) session.getAttribute(SystemConst.USER);
 		if (user != null) {
 			return "ok";
 		}

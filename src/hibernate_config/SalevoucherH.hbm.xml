@@ -14,14 +14,17 @@
         <property name="customerType" type="int">
             <column name="customer_type" not-null="true" />
         </property>
-        <property name="customerId" type="int">
-            <column name="customer_id" not-null="true" />
+        <property name="customerId" type="string">
+            <column name="customer_id" length="20" not-null="true" />
         </property>
         <property name="saleDate" type="date">
             <column name="sale_date" length="10" not-null="true" />
         </property>
         <property name="stoId" type="int">
-            <column name="sto_id" not-null="true" />
+            <column name="sto_id" not-null="true" /> 
+        </property>
+       <property name="regionId" type="string">
+            <column name="region_id" not-null="true" />
         </property>
         <property name="userId" type="int">
             <column name="user_id" not-null="true" />

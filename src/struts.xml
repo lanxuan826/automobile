@@ -15,5 +15,20 @@
 	
 	<!-- 用户Action -->
 	<include file="/struts_config/struts-user.xml"></include>
-	
+	<!-- 车辆销售Action -->
+	<include file="/struts_config/struts-sale.xml"></include>
+	<!-- 客户Action -->
+	<include file="/struts_config/struts-customer.xml"></include>	
+	<!-- 经销商Action -->
+	<include file="/struts_config/struts-dealer.xml"></include>
+	<!-- 仓库Action -->	
+	<include file="/struts_config/struts-storge.xml"></include>
+	<!--地区Action-->
+	<include file="/struts_config/struts-region.xml"></include>
+	<!-- 税率Action -->
+	<include file="/struts_config/struts-taxrate.xml"></include>
+	<!-- 车辆Action -->
+	<include file="/struts_config/struts-automobile.xml"></include>
+	<!-- 车型Action -->
+	<include file="/struts_config/struts-autotype.xml"></include>
 </struts>

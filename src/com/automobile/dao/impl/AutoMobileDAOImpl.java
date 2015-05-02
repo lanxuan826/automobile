@@ -8,6 +8,7 @@ import org.hibernate.criterion.Example;
 
 import com.automobile.dao.AutoMobileDAO;
 import com.automobile.model.AutoMobile;
+import com.automobile.model.AutoType;
 import com.opensymphony.xwork2.util.logging.Logger;	
 import com.opensymphony.xwork2.util.logging.LoggerFactory;
 
@@ -131,6 +132,20 @@ public class AutoMobileDAOImpl extends BaseDAOImpl implements AutoMobileDAO {
 			log.debug("attach successful");
 		} catch (RuntimeException re) {
 			log.error("attach failed", re);
+			throw re;
+		}
+	}
+
+	@Override
+	public List<AutoMobile> getAutoInfoByType(AutoType autoType) {
+		log.debug("finding  AutoMobile by type  instances");
+		try {
+			String queryString = "from AutoMobile a where a.autoTypeId = '"+autoType.getAutoTypeId()+"'";
+			System.out.println("============="+queryString);
+			Query queryObject = getSessionFactory().getCurrentSession().createQuery(queryString);
+			return queryObject.list();
+		} catch (RuntimeException re) {
+			log.error("find all failed", re);
 			throw re;
 		}
 	}

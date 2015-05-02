@@ -8,5 +8,45 @@
 	<bean id="userAction" class="com.automobile.action.UserAction" singleton="false">
 		<property name="userService" ref="userService"></property>
 	</bean>
-
+	
+	<!-- 销售Action 	-->
+	<bean id="saleManageAction" class="com.automobile.action.SaleManageAction" singleton="false">
+		<property name="saleManageService" ref="saleManageService"></property>
+		<property name="custService" ref="customerService"></property>
+		<property name="dealerService" ref="dealerService"></property>
+		<property name="storgeService" ref="storgeService"></property>
+		<property name="userService" ref="userService"></property>
+		<property name="taxRateService" ref="taxRateService"></property>
+		<property name="regionService" ref="regionService"></property>
+	</bean>
+	
+	<!-- 客户Action -->
+	<bean id="custAction" class="com.automobile.action.CustomerAction" singleton="false">
+		<property name="custService" ref="custService"></property>
+	</bean>
+	
+	<!-- 经销商Action -->
+	<bean id="dealerAction" class="com.automobile.action.DealerAction" singleton="false">
+		<property name="dealerService" ref="dealerService"></property>
+	 </bean>
+	<!-- 仓库Action -->
+	<bean id="storgeAction" class="com.automobile.action.StorgeAction" singleton="false">
+		<property name="storgeService" ref="storgeService"></property>
+	</bean>
+	<!-- 地区Action -->
+	<bean id="regionAction" class="com.automobile.action.RegionAction" singleton="false">
+		<property name="regionService" ref="regionService"></property>
+	</bean>
+	<!-- 税率Action -->
+	<bean id="taxRateAction" class="com.automobile.action.TaxRateAction" singleton="false">
+		<property name="taxRateService" ref="taxRateService"></property>
+	</bean>
+	<!-- 车辆类型Action -->
+	<bean id="autoTypeAction" class="com.automobile.action.AutoTypeAction" singleton="false">
+		<property name="autoTypeService" ref="autoTypeService"></property>
+	</bean>
+	<!-- 车辆Action -->
+	<bean id="autoMobileAction" class="com.automobile.action.AutoMobileAction" singleton="false">
+		<property name="autoMobileService" ref="autoMobileService"></property>
+	</bean>
 </beans>

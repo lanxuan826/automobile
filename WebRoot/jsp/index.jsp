@@ -1,6 +1,6 @@
 <%@page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<head id="Head1">
+<head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>DF汽车销售分析决策系统</title>
     <link href="../css/default.css" rel="stylesheet" type="text/css" />
@@ -15,148 +15,148 @@
 	var _menus = {
 	"menus": [{
 		"menuid": "1",
-		"icon": "icon-sys",
+		"icon": "icon-xtgl",
 		"menuname": "系统管理",
 		"menus": [{
 			"menuid": "12",
 			"menuname": "系统设置",
-			"icon": "icon-add",
+			"icon": "icon-xtsz",
 			"url": "#",
 			"child": [{
 				"menuid": "140",
 				"menuname": "初始化",
-				"icon": "icon-role",
+				"icon": "icon-xtcsh",
 				"url": "../jsp/login.jsp"
 			},
 			{
 				"menuid": "150",
 				"menuname": "导入数据",
-				"icon": "icon-set",
+				"icon": "icon-drsj",
 				"url": "demo.html"
 			}]
 		},
 		{
 			"menuid": "13",
 			"menuname": "权限管理",
-			"icon": "icon-users",
+			"icon": "icon-qxgl",
 			"url": "demo2.html",
 			"child": [{
 				"menuid": "141",
 				"menuname": "角色设置",
-				"icon": "icon-role",
+				"icon": "icon-jssz",
 				"url": "demo2.html"
 			},
 			{
 				"menuid": "151",
 				"menuname": "权限分配",
-				"icon": "icon-set",
+				"icon": "icon-qxfp",
 				"url": "demo.html"
 			}]
 		},
 		{
 			"menuid": "14",
 			"menuname": "数据备份",
-			"icon": "icon-role",
+			"icon": "icon-sjbf",
 			"url": "demo2.html",
 			"child": [{
 				"menuid": "142",
 				"menuname": "自动备份",
-				"icon": "icon-role",
+				"icon": "icon-zdbf",
 				"url": "demo2.html"
 			},
 			{
 				"menuid": "152",
 				"menuname": "手动备份",
-				"icon": "icon-set",
+				"icon": "icon-sdbf",
 				"url": "demo.html"
 			}]
 		},
 		{
 			"menuid": "15",
 			"menuname": "日志管理",
-			"icon": "icon-set",
+			"icon": "icon-rzgl",
 			"url": "demo.html",
 			"child": [{
 				"menuid": "143",
 				"menuname": "删除日志",
-				"icon": "icon-role",
+				"icon": "icon-scrz",
 				"url": "demo2.html"
 			},
 			{
 				"menuid": "153",
 				"menuname": "查询日志",
-				"icon": "icon-set",
+				"icon": "icon-cxrz",
 				"url": "demo.html"
 			}]
 		}]
 	},
 	{
 		"menuid": "8",
-		"icon": "icon-sys",
+		"icon": "icon-jcdagl",
 		"menuname": "基础档案管理",
 		"menus": [{
 			"menuid": "21",
 			"menuname": "车辆档案",
-			"icon": "icon-nav",
+			"icon": "icon-clda",
 			"url": "demo.html"
 		},
 		{
 			"menuid": "22",
 			"menuname": "管理员档案",
-			"icon": "icon-nav",
+			"icon": "icon-gzyda",
 			"url": "demo1.html",
 			"child": [{
 				"menuid": "221",
 				"menuname": "分配角色",
-				"icon": "icon-nav",
+				"icon": "icon-fbjs",
 				"url": "demo.html"
 			},{
 				"menuid": "222",
 				"menuname": "管理员信息管理",
-				"icon": "icon-nav",
+				"icon": "icon-gzyxxgl",
 				"url": "userManage"
 			}]
 		},
 		{
 			"menuid": "21",
 			"menuname": "客户档案",
-			"icon": "icon-nav",
+			"icon": "icon-khda",
 			"url": "demo.html"
 		},
 		{
 			"menuid": "21",
 			"menuname": "经销商档案",
-			"icon": "icon-nav",
+			"icon": "icon-jxsda",
 			"url": "demo.html"
 		},
 		{
 			"menuid": "21",
-			"menuname": "4S档案",
-			"icon": "icon-nav",
+			"menuname": "直营店档案",
+			"icon": "icon-zydda",
 			"url": "demo.html"
 		},
 		{
 			"menuid": "21",
 			"menuname": "仓库档案",
-			"icon": "icon-nav",
+			"icon": "icon-ckda",
 			"url": "demo.html"
 		},
 		{
 			"menuid": "21",
 			"menuname": "地区档案",
-			"icon": "icon-nav",
+			"icon": "icon-dqda",
 			"url": "demo.html"
 		},
 		{
 			"menuid": "21",
 			"menuname": "税率类型档案",
-			"icon": "icon-nav",
+			"icon": "icon-slda",
 			"url": "demo.html"
 		},
 		{
 			"menuid": "21",
 			"menuname": "车辆类型档案",
-			"icon": "icon-nav",
+			"icon": "icon-clxhda",
 			"url": "demo.html"
 		}]
 	},
@@ -168,8 +168,13 @@
 			"menuid": "31",
 			"menuname": "车辆销售",
 			"icon": "icon-nav",
-			"url": "demo1.html",
+			"url": "",
 			"child":[{
+				"menuid": "310",
+				"menuname": "车辆销售",
+				"icon": "icon-nav",
+				"url": "carSaleManage]"
+			},{
 				"menuid": "311",
 				"menuname": "销售计划",
 				"icon": "icon-nav",
@@ -201,7 +206,7 @@
 			"url": "demo2.html",
 			"child": [{
 				"menuid": "311",
-				"menuname": "新增订单",
+				"menuname": "订单信息",
 				"icon": "icon-nav",
 				"url": "demo1.html"
 			},
@@ -219,14 +224,19 @@
 			"icon": "icon-nav",
 			"url": "demo2.html",
 			"child": [{
-				"menuid": "311",
-				"menuname": "收款单管理",
+				"menuid": "3211",
+				"menuname": "销售财务管理",
+				"icon": "icon-nav",
+				"url": "demo1.html"
+			},{
+				"menuid": "3212",
+				"menuname": "营销费用管理",
 				"icon": "icon-nav",
 				"url": "demo1.html"
 			},
 			{
-				"menuid": "312",
-				"menuname": "其他费用单",
+				"menuid": "3212",
+				"menuname": "其他费用管理",
 				"icon": "icon-nav",
 				"url": "demo2.html"
 			}]
@@ -236,43 +246,65 @@
 		"menuid": "56",
 		"icon": "icon-sys",
 		"menuname": "销售分析决策",
-		"menus": [{
+		"menus": [
+		          {
 			"menuid": "31",
-			"menuname": "销售报表",
+			"menuname": "销售业绩报表分析",
 			"icon": "icon-nav",
-			"url": "demo1.html",
+			"url": "",
 			"child":[{
 				"menuid": "311",
-				"menuname": "销售业绩报表",
+				"menuname": "按时间维度分析",
+				"icon": "icon-nav",
+				"url": "saleCountAnalysisByDate.jsp"
+			},{
+				"menuid": "311",
+				"menuname": "按车型维度分析",
+				"icon": "icon-nav",
+				"url": "demo1.html"
+			},{
+				"menuid": "311",
+				"menuname": "按地区维度分析",
 				"icon": "icon-nav",
 				"url": "demo1.html"
 			}]
 		},
 		{
 			"menuid": "321",
-			"menuname": "图表分析",
+			"menuname": "销售报表分析",
 			"icon": "icon-nav",
 			"url": "demo2.html",
 			"child": [{
 				"menuid": "311",
 				"menuname": "销售业绩分析",
 				"icon": "icon-nav",
-				"url": "demo1.html"
+				"url": "saleCountAnalysis"
 			},
 			{
 				"menuid": "312",
-				"menuname": "客户综合分析",
+				"menuname": "车型综合分析",
 				"icon": "icon-nav",
 				"url": "demo2.html"
 			},	{
 				"menuid": "312",
-				"menuname": "车辆流向分析",
+				"menuname": "客户综合分析",
+				"icon": "icon-nav",
+				"url": "demo2.html"
+			},{
+				"menuid": "312",
+				"menuname": "经销商综合分析",
 				"icon": "icon-nav",
 				"url": "demo2.html"
 			},
 			{
 				"menuid": "312",
-				"menuname": "营销费用分析",
+				"menuname": "销售财务分析",
+				"icon": "icon-nav",
+				"url": "demo2.html"
+			},
+			{
+				"menuid": "312",
+				"menuname": "仓库综合分析",
 				"icon": "icon-nav",
 				"url": "demo2.html"
 			},
@@ -352,7 +384,7 @@
                 $.messager.confirm('系统提示', '您确定要退出本次登录吗?', function(r) {
 
                     if (r) {
-                        location.href = '/ajax/loginout.ashx';
+                        location.href = '/ajax/loginout';
                     }
                 });
             })
@@ -437,7 +469,6 @@
 		<div class="menu-sep"></div>
 		<div id="exit">退出</div>
 	</div>
-
 
 </body>
 </html>

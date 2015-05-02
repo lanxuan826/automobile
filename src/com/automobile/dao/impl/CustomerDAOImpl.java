@@ -147,5 +147,34 @@ public class CustomerDAOImpl extends BaseDAOImpl implements CustomerDAO {
 			throw re;
 		}
 	}
+	/**
+	 * 通过propertyName 和 value获取customer
+	 * @param propertyName
+	 * @param value
+	 * @return
+	 */
+	public List<Customer> findCustomerByProperty(String propertyName, Object value) {
+		
+		try{
+			String querySql = "from Customer  model where model."+propertyName+"=?";
+			Query query = getSessionFactory().getCurrentSession().createQuery(querySql);
+			query.setParameter(0, value);
+			return query.list();
+		}catch(Exception ex) {
+			throw ex;
+		}
+	}
+
+	@Override
+	public List<Customer> findCustomerByCustId(String id) {
+		try{
+			String querySql = "from Customer  model where model.custId=?";
+			Query query = getSessionFactory().getCurrentSession().createQuery(querySql);
+			query.setParameter(0, id);		
+			return query.list();
+		}catch(Exception ex) {
+			throw ex;
+		}
+	}
 
 }

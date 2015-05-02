@@ -149,7 +149,7 @@ public class SaleVoucherHDAOImpl  extends BaseDAOImpl implements SaleVoucherHDAO
 
 	@Override
 	public List findBySalevoucherHValue(Object SalevoucherHValue) {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 

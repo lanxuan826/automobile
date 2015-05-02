@@ -3,8 +3,8 @@ package com.automobile.util;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 /**
- * 系统工具
- * @author Administrator
+ * 系统工具类
+ * @author ly-wangweiqiang
  *
  */
 public class SystemUtil {

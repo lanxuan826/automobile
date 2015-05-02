@@ -11,11 +11,13 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.hibernate.LockMode;
 import org.hibernate.Query;
+import org.hibernate.Session;
 import org.hibernate.criterion.Example;
 
 import com.automobile.dao.DealerDAO;
 import com.automobile.model.Dealer;
 import com.automobile.model.Dealer;
+import com.automobile.model.User;
 import com.opensymphony.xwork2.util.logging.Logger;
 import com.opensymphony.xwork2.util.logging.LoggerFactory;
 
@@ -108,6 +110,23 @@ public class DealerDAOImpl  extends BaseDAOImpl implements DealerDAO {
 			throw re;
 		}
 	}
+	
+	public List<Dealer> showDealerListAll() {
+		log.debug("finding all Dealer instances");
+		try {
+			String queryString = "from Dealer";
+			Session session = getSessionFactory().getCurrentSession();
+			Query queryObject = session.createQuery(queryString);
+//			Query queryObject = getSessionFactory().getCurrentSession().createQuery(queryString);
+			return queryObject.list();
+		} catch (RuntimeException re) {
+			log.error("find all failed", re);
+			throw re;
+		}
+	}
+	
+	
+
 
 	public Dealer merge(Dealer detachedInstance) {
 		log.debug("merging Dealer instance");
@@ -140,6 +159,18 @@ public class DealerDAOImpl  extends BaseDAOImpl implements DealerDAO {
 		} catch (RuntimeException re) {
 			log.error("attach failed", re);
 			throw re;
+		}
+	}
+
+	@Override
+	public List<Dealer> findDealerByProperty(String propertyName, Object value) {
+		try{
+			String querySql = "from Dealer  model where model."+propertyName+"=?";
+			Query query = getSessionFactory().getCurrentSession().createQuery(querySql);
+			query.setParameter(0, value);
+			return query.list();
+		}catch(Exception ex) {
+			throw ex;
 		}
 	}
 

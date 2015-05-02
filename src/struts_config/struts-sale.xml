@@ -7,26 +7,22 @@
 <struts>	
 	<!-- 销售action--> 
 	<package name="sale" extends="struts-default" >
-		<action name="saleManage" class="com.automobile.action.SaleManageAction" method="checkLogin">
-			<!-- 
-			<result name="ok">../jsp/index.jsp</result>
-			<result name="input">/jsp/login.jsp</result>
-			 -->
+		<action name="carSaleManage" class="com.automobile.action.SaleManageAction" method="redirctCarSaleManage">
+			<result name="ok" >../jsp/carSaleManage.jsp</result>
 		</action>
-		
-		<action name="userManage" class="com.automobile.action.UserAction" method="userInfoManage">
-			<result name="ok">../jsp/userinfo.jsp</result>
+		<!-- 销售单 -->
+		<action name="carSaleFormAdd" class="com.automobile.action.SaleManageAction" method="addCarSaleForm">
+			<result name="ok">../jsp/carSaleManage.jsp</result>
 		</action>
 	</package>
 	
-	<!-- 返回json数据 -->
-	<!-- 
-	<package name="json"  extends="json-default">
-		<action name="userListAction" class="com.automobile.action.UserAction" method="showUserListAll">
-			<result name="success" type="json">
-				<param name="root" >resultObject</param>
-			</result>  
-		</action>
+	
+	<package name="ajaxJson" extends="json-default">
+	<action name="carSaleManageData" class="com.automobile.action.SaleManageAction" method="showSaleVoucherHData">
+		<result name="success" type="json">
+		<param name="root" >resultObject</param>
+		</result>  
+	</action>
 	</package>
- 	 -->
+	
 </struts>

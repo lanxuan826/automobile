@@ -56,7 +56,7 @@ public class TaxRateDAOImpl extends BaseDAOImpl implements TaxRateDAO {
 	public TaxRate findById(java.lang.Integer id) {
 		log.debug("getting TaxRate instance with id: " + id);
 		try {
-			TaxRate instance = (TaxRate) getSessionFactory().getCurrentSession().get("com.yuqing.model.TaxRate", id);
+			TaxRate instance = (TaxRate) getSessionFactory().getCurrentSession().get("com.automobile.model.TaxRate", id);
 			return instance;
 		} catch (RuntimeException re) {
 			log.error("get failed", re);
@@ -67,7 +67,7 @@ public class TaxRateDAOImpl extends BaseDAOImpl implements TaxRateDAO {
 	public List findByExample(TaxRate instance) {
 		log.debug("finding TaxRate instance by example");
 		try {
-			List results = getSessionFactory().getCurrentSession().createCriteria("com.yuqing.model.TaxRate")
+			List results = getSessionFactory().getCurrentSession().createCriteria("com.automobile.model.TaxRate")
 					.add(Example.create(instance)).list();
 			log.debug("find by example successful, result size: "
 					+ results.size());

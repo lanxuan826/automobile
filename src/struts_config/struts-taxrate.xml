@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+    
+<struts>	
+	<!-- 
+	<package name="sale" extends="struts-default" >
+	
+		<action name="carSaleManage" class="com.automobile.action.SaleManageAction" method="showSaleData">
+			<result name="ok">../jsp/carSaleManage.jsp</result>
+			<result name="input">/jsp/carSaleFormAdd.jsp</result>
+		</action>
+
+	</package>
+	 -->
+	 <!-- 通过type获取customer -->
+	<package name="taxrate" extends="json-default">
+	
+	<action name="getTaxRateInfo" class="com.automobile.action.TaxRateAction" method="getTaxRateInfo">
+	<result name="success" type="json">
+		<param name="root" >resultArray</param>
+	</result>  
+	</action>
+	
+	</package>
+</struts>
